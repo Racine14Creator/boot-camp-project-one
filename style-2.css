@@ -6,13 +6,14 @@
 
 body{
     background-color: lightblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .parent{
     position: relative;
     background-color: red;
     width: 850px;
-    height: 600px;
+    height: 530px;
     margin: 50px auto;
 
     display: flex;
@@ -61,6 +62,7 @@ main{
 }
 
 main nav {
+    position: relative;
     width: 100%;
     background-color: white;
 
@@ -69,17 +71,22 @@ main nav {
     align-items: center;
     justify-content: space-between;
     padding: 8px 15px;
+    gap: 50px;
 }
 
 main nav form{
     border: 2px solid #ccc;
     padding: 5px;
     border-radius: 8px;
+    /* width: 100%; */
+    flex: 1;
+
 }
 main nav form input{
     background: none;
     border: none;
     outline: none;
+    width: calc(100% - 30px);
 }
 .navigation-menu{
     display: flex;
@@ -123,4 +130,124 @@ main nav form input{
     height: 32px;
     border-radius: 50%;
     border: 2px solid #ccc;
+}
+
+.container{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px;
+}
+
+.container .aside{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.aside .child{
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+    border: 1px solid rgb(76, 139, 160);
+    padding: 5px 15px;
+    border-radius: 8px;
+}
+
+.aside .child h1{
+    font-size: 14px;
+}
+.aside .child p{
+    font-size: 9px;
+}
+
+.container .main{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container .main .header,
+.container .main .form{
+    background-color: white;
+    padding: 20px 30px;
+    box-shadow: 2px 5px 5px rgba(0,0,0,0.5);
+    border-radius: 5px;
+}
+
+.container .main .header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .profile{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: black;
+    overflow: hidden;
+}
+
+.header .profile img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header button{
+    padding: 3px 10px;
+    cursor: pointer;
+    width: fit-content;
+    height: fit-content;
+}
+
+
+.container .main .form form{
+    position: relative;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    font-size: 12px;
+}
+
+.container .main .form form label{
+    display: block;
+}
+
+.container .form button{
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    background-color: rgb(8, 78, 152);
+    color: white
+}
+
+.form form input, .form form select{
+    padding: 5px;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.grid-2{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 100%;
+    /* background-color: red; */
+}
+
+.grid-2 div{
+    position: relative;
+    width: 100%;
 }
