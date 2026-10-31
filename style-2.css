@@ -14,6 +14,9 @@ body{
     width: 850px;
     height: 600px;
     margin: 50px auto;
+
+    display: flex;
+    flex-direction: row;
 }
 
 aside{
@@ -34,11 +37,90 @@ aside ul{
     list-style: none;
     display: flex;
     flex-direction: column;
+    /* To separete the list item */
+    /* gap: 5px; */
 }
-
+aside ul li{
+    margin: 1px 0;
+}
 aside ul li a{
+    display: block;
     color: white;
     text-decoration: none;
     padding: 10px 30px;
     font-size: 13px;
+}
+
+aside ul li a:hover, aside ul li a.active{
+    background-color: rgba(62, 126, 194, 0.344);
+}
+
+main{
+    background-color: aliceblue;
+    width: 80%;
+}
+
+main nav {
+    width: 100%;
+    background-color: white;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 15px;
+}
+
+main nav form{
+    border: 2px solid #ccc;
+    padding: 5px;
+    border-radius: 8px;
+}
+main nav form input{
+    background: none;
+    border: none;
+    outline: none;
+}
+.navigation-menu{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    align-content: center;
+    padding: 2px;
+    flex-direction: row;
+    /* background: red; */
+}
+
+.navigation-menu span.icon{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: aliceblue;
+    border: 2px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* This will help us to chang the icon size */
+
+    font-size: 12px;
+    color: #232323;
+}
+
+.avatar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3px;
+}
+
+.avatar .text{
+    font-size: 13px;
+}
+.avatar img{
+    object-fit: cover;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
 }
