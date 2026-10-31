@@ -1,0 +1,167 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+
+    padding: 10px 20px;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+nav ul li a{
+    padding: 10px 20px;
+}
+nav ul li a.active{
+    background-color: white;
+    color: black;
+}
+button{
+    padding: 10px 20px;
+    background-color: black;
+    align-items: center;
+    justify-content: space-around;
+    color: aqua;
+    border: none;
+    cursor: pointer;
+}
+.red{
+    background-color: red;
+    color: white;
+}
+.green{
+    background: green;
+    color: black;
+}
+.chocolate{
+    background-color: chocolate;
+    color: white;
+}
+
+.body-message{
+    background-color: rgba(173, 216, 230, 0.563);
+}
+
+.main{
+    background-color: #dedede;
+    box-shadow: 1px 1px 70px rgba(0,0,0,0.5);
+    width: 320px;
+    height: 500px;
+    position: relative;
+    margin: 50px auto;
+    border-radius: 20px;
+    overflow: hidden;
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    .header{
+        padding: 30px 10px 0 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        a{
+            color: black;
+            text-decoration: none;
+        }
+
+    }
+
+    .content{
+        margin-top: 10px;
+        padding: 30px 0 0 0;
+        border-radius: 20px 20px 0 0;
+        background-color: white;
+        height: calc(100% - 65px);
+
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        a.user{
+            text-decoration: none;
+            color: #212121;
+        }
+        .user{
+            cursor: pointer;
+            position: relative;
+            border-bottom: 1px solid #cccccc9d;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            gap: 10px;
+
+            &:hover{
+                opacity: .5;
+            }
+            .avatar{
+                width: 40px;
+                height: 40px;
+                background-color: black;
+                border-radius: 50%;
+            }
+            .messages-content{
+                width: calc(100% - 50px);
+                /* background-color: red; */
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .data{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    .contenu{
+                        display: flex;
+                        flex-direction: column;
+                        .username{
+                            font-weight: 600;
+                            font-size: 14px;
+                        }
+                    }
+                    span{
+                        font-size: 12px;
+                    }
+                    .status{
+                        height: fit-content;
+                        padding: 2px 8px;
+                        border-radius: 15px;
+                        font-size: 10px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        &.active{
+                            background-color: rgba(0, 128, 0, 0.21);
+                            color: green;
+                            border: 1px solid green;
+                        }
+                        &.noactive{
+                            background-color:rgba(255, 0, 0, 0.144);
+                            color: red;
+                            border: 1px solid red;
+                        }
+
+                    }
+                }
+                .time{
+                    font-size: 9px;
+                }
+            }
+        }
+    }
+
+
+}
